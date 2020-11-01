@@ -1,6 +1,6 @@
 [run]
-omit=*__init__.py*,*/.venv/*,*.idea/*,*/tests/*
+omit=*__init__.py*,*/.venv/*,*.idea/*,*/.pytest-cache/*
 
 [report]
-omit=*__init__.py*,*/.venv/*,*.idea/*,*/tests/*
+omit=*__init__.py*,*/.venv/*,*.idea/*,*/.pytest-cache/*
 exclude_lines=__repr__
