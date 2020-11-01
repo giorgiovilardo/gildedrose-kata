@@ -17,8 +17,7 @@ class GildedRose:
 
     def update_quality(self):
         for item in self.items:
-            quality_control_function = self._determine_quality_func(item)
-            quality_control_function(item)  # noqa
+            self._determine_quality_func(item)(item)  # noqa
             item.sell_in -= 1
 
     def _legendary(self, item: Item):
