@@ -1,5 +1,3 @@
-import pytest
-from gildedrose_kata import __version__
 from gildedrose_kata.gildedrose import Item, GildedRose
 
 
