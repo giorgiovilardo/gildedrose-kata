@@ -55,7 +55,7 @@ class GildedRose:
             "Conjured": self._conjured,
             "Backstage": self._backstage,
         }
-        for key in special_item_funcs.keys():
+        for key in special_item_funcs:
             if key in item.name:
                 return special_item_funcs[key]
         return self._normal
