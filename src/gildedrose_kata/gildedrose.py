@@ -17,7 +17,8 @@ class GildedRose:
 
     def update_quality(self):
         for item in self.items:
-            self._determine_quality_func(item)(item)  # noqa
+            drop_quality = self._return_quality_dropper_func(item)
+            drop_quality(item)
             item.sell_in -= 1
 
     def _legendary(self, item: Item):
@@ -48,7 +49,7 @@ class GildedRose:
             item.quality - quantity_drop if item.quality >= quantity_drop else 0
         )
 
-    def _determine_quality_func(self, item: Item):
+    def _return_quality_dropper_func(self, item: Item):
         special_item_funcs = {
             "Sulfuras": self._legendary,
             "Aged Brie": self._aged_brie,
