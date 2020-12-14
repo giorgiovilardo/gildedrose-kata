@@ -12,6 +12,9 @@ class Item:
 
 
 class GildedRose:
+    # SRP Violato: GildedRose deve sia categorizzare gli oggetti, sia
+    # modificarne la qualità (il tipo di oggetto starebbe meglio negli Item)
+    #
     def __init__(self, items: List[Item]):
         self.items = items
 
